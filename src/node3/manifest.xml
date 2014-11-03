@@ -1,0 +1,16 @@
+<package>
+  <description brief="node3">
+
+     node3
+
+  </description>
+  <author>Seed</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/node3</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

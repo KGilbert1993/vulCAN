@@ -11,17 +11,17 @@
 
 import rospy
 from std_msgs.msg import String
+from frame_msg.msg import frame
 
 def callback(data, Pub):
-    if(data.data == '5'):
-        Pub.publish('AWK');
-        rospy.loginfo(rospy.get_caller_id()+' Received signal')
+    if data.msg_id is 0x10:
+        Pub.publish(0x00, 0, 1, [0], 0, 0)
 
 def listener():
     rospy.init_node('node2', anonymous=True)
 
-    Pub = rospy.Publisher('CAN_BUS', String, queue_size=10)
-    rospy.Subscriber('CAN_BUS', String, callback, Pub)
+    Pub = rospy.Publisher('CAN_BUS', frame, queue_size=10)
+    rospy.Subscriber('CAN_BUS', frame, callback, Pub)
 
     rospy.spin()
         

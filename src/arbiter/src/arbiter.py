@@ -24,11 +24,11 @@ import can_lib
 import rospy
 import random
 from std_msgs.msg import String
-from arbiter.msg import frame
+from frame_msg.msg import frame
 
 def callback(data, pub):
-    print data.msg_id
-    
+    print data   
+ 
 def talker():
     pub = rospy.Publisher('CAN_BUS', frame, queue_size=10)
     rospy.Subscriber('CAN_BUS', frame, callback, pub)

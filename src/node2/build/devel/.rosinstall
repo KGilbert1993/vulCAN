@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/seed/Documents/cansim_ros_workspace/src/node2/build/devel/setup.sh
