@@ -30,9 +30,9 @@ def callback(data, pub):
     print data.msg_id
     
 def talker():
-    pub = rospy.Publisher('chatter', frame, queue_size=10)
-    rospy.Subscriber('chatter', frame, callback, pub)
-    rospy.init_node('talker', anonymous=True)
+    pub = rospy.Publisher('CAN_BUS', frame, queue_size=10)
+    rospy.Subscriber('CAN_BUS', frame, callback, pub)
+    rospy.init_node('arbiter', anonymous=True)
     r = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
         pub.publish(0x10, 0, 1, [0x01], 0x00, 0)
