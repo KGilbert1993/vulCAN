@@ -1,0 +1,20 @@
+msg_id: 1
+remote_request: True
+DLC: 2
+data: [17, 255]
+CRC_seq: 4660
+ACK: False
+Received message not marked for arbiter
+msg_id: 2047
+remote_request: False
+DLC: 1
+data: [0]
+CRC_seq: 0
+ACK: False
+msg_id: 0
+remote_request: False
+DLC: 0
+data: []
+CRC_seq: 0
+ACK: False
+Received message not marked for arbiter

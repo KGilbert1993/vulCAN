@@ -4,15 +4,12 @@ class frame:
     msg_id = 0
     remote_request = 0
     DLC = 0
-    data = 0
+    data = []
     CRC_seq = 0
     ACK = 0
 
     def __init__(self):
         self.data = 0
-
-    def __init__(self, data)
-        self.msg_id = (data & 0x    
 
 class node:
     ids = []
