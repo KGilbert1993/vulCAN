@@ -8,24 +8,21 @@ class frame:
     CRC_seq = 0
     ACK = 0
 
+    EOF = 0x7F
+
     def __init__(self):
-        self.data = 0
+        self.msg_id = 0
+        self.remote_request = 0
+        self.dlc = 0
+        self.data = []
+        self.crc_seq = 0
+        self.ack = 0
 
-class node:
-    ids = []
+    def __init__(self, msg_id, RTR, dlc, data, CRC, ACK):
+        self.msg_id = msg_id
+        self.remote_request = RTR
+        self.dlc = dlc
+        self.data = data
+        self.crc_seq = CRC
+        self.ack = ACK
 
-    def __init__(self, msg_ids):
-        self.ids = msg_ids
-
-class can_bus:
-    BUS = frame()
-    nodes = []
-     
-    def __init__(self):
-        BUS = 0        
-
-    def send(self, msg):
-        self.BUS = msg
-
-    def display(self):
-        print self.BUS	
